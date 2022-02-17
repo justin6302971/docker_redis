@@ -1,0 +1,15 @@
+# canonical configuration
+version: "3.7"
+
+services:
+    redisdb:
+        container_name: local_redisdb_${ENVTYPE}
+        image: redis:6.2.4
+        networks:
+            - local-redis-nw
+networks:
+    local-redis-nw:
+        name: local-redis-nw
+
+        
+  
